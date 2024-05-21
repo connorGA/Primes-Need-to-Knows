@@ -1,0 +1,43 @@
+# Array : a collection of elements, each identified by an array index or key. Arrays are a fundamental data structure used to store a collection of elements(values or variables), tpyically of the same data type.
+
+# Properties:
+    # Fixed Size: Once an array is created, its size cannot be changed
+    # Indexing: Elements in an array can be accessed using their index, with the first element having and index of 0
+    # Contiguous Memory Allocation: Arrays are stored in contiguous memory locations
+
+# Operations:
+    # Access: 'array[index]'
+    # Update: 'array[index] = value'
+    # Traversal: Loop through the array using a for loop(for,while)
+    # Insertion: Adding an element at a specific position(may require shifting elements)
+    # Deletion: Removing an element from a specific position(may require shifting elements)
+
+# Time Complexity:
+    # Access: O(1)
+    # Update: O(1)
+    # Traversal: O(n)
+    # Insertion (at end): O(1)(if no resizing needed), O(n)(if resizing needed)
+    # Deletion: O(n) (due to shifting)
+
+
+# Creating an array
+arr = [1, 2, 3, 4, 5]
+
+# Accessing elements
+print(arr[0])  # Output: 1
+
+# Updating an element
+arr[1] = 20
+print(arr) 
+
+# Traversing the array
+for element in arr:
+    print(element) # Output: prints every element in arr
+
+# Inserting an element
+arr.insert(2, 10)
+print(arr) # Output: [1, 20, 10, 3, 4, 5]   inserts new element into 2 index
+
+# Deleting an element
+arr.pop(3)
+print(arr) # Output: [1, 20, 10, 4, 5] deleted element at index 3
