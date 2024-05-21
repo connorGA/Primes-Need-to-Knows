@@ -60,3 +60,10 @@ def find_max_min(arr):
 
 print(find_max_min(arr))
 
+# 3. Rotate Array:
+#  Write a function that rotate an array to the right by 'k' steps
+def rotate_array(arr, k):
+    k = k % len(arr) #handle cases where k > len(arr)
+    return arr[-k:] + arr[:-k]
+
+print(rotate_array([1, 2, 3, 4, 5], 2))
