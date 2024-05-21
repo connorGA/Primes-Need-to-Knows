@@ -41,3 +41,12 @@ print(arr) # Output: [1, 20, 10, 3, 4, 5]   inserts new element into 2 index
 # Deleting an element
 arr.pop(3)
 print(arr) # Output: [1, 20, 10, 4, 5] deleted element at index 3
+
+
+# Practice Problems
+
+# 1. Reverse an Array:
+def reverse_array(arr):
+    return arr[::-1]            # 'arr[start:stop:step]' is the general form of slicing in python. start is the index to start slice and stop is the index to stop slice. Step is the step size or stride. Since start and stop arent specified in the slice, these values default to beginning and end of array. Step -1 means the slice will be taken from the end towards the beginning, effectively reversing the array
+
+print(reverse_array(arr))
