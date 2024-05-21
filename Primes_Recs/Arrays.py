@@ -50,3 +50,13 @@ def reverse_array(arr):
     return arr[::-1]            # 'arr[start:stop:step]' is the general form of slicing in python. start is the index to start slice and stop is the index to stop slice. Step is the step size or stride. Since start and stop arent specified in the slice, these values default to beginning and end of array. Step -1 means the slice will be taken from the end towards the beginning, effectively reversing the array
 
 print(reverse_array(arr))
+
+# 2. Find the maximum and minimum element:
+def find_max_min(arr):
+    arr_max = max(arr)
+    arr_min = min(arr)
+
+    return arr_max, arr_min
+
+print(find_max_min(arr))
+
