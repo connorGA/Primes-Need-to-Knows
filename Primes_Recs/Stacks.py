@@ -87,4 +87,19 @@ def reverse_string(s):
 
 # Test case
 print(reverse_string("hello"))  # Output: "olleh"
+
+# 3. Next Greater Element: Given an array, find the next greater element for each element in the array
+def next_greater_element(arr):
+    stack = Stack()
+    result = [-1] * len(arr)
+    for i in range(len(arr) -1, -1, -1):
+        while not stack.is_empty() and stack.peek() <= arr[i]:
+            stack.pop()
+        if not stack.is_empty():
+            result[i] = stack.peek()
+        stack.push(arr[i])
+    return result
+
+# Test Case
+print(next_greater_element([4, 5, 2, 25]))  # Output: [5, 25, 25, -1]
  
