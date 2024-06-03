@@ -5,3 +5,86 @@
     # Pop: remove the top element from the stack
     # Peek/Top: retrieve the top element of the stack without removing it
     # isEmpty: check if the stack is empty
+
+
+# Implementation
+    # In Python, a stack can easily be implemented using lists with the 'append()' and 'pop()' methods
+
+# Example Implementation 
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def is_empty(self):
+        return len(self.items) == 0
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if self.is_empty():
+            return None
+        return self.items.pop()
+    
+    def peek(self):
+        if self.is_empty():
+            return None
+        return self.items[-1]
+    
+    def size(self):
+        return len(self.items)
+    
+    def display(self):
+        print(self.items)
+
+# Example Usage
+stack = Stack()
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.display() # Output: [10, 20, 30]
+print(stack.pop()) # Output: 30
+print(stack.peek()) # Output: 20
+print(stack.is_empty()) # Output: False
+stack.display() # Output: [10, 20]
+
+
+# Use Cases for Stacks:
+    # Function Call Management: Stacks are used to manage function calls and recursion. Each time a function is called, a new frame is pushed onto the stack, and when the funciton returns, the frame is popped off.
+    # Expression Evaluation: Stacks are used to evaluate arithmetic expressions, especially those written in postfix notation(Reverse Polish Notation).
+    # Backtracking Algorithms: Stacks are used in algorithms that involve backtracking, such as solving mazes, puzzles, and pathfinding problems
+    # Undo Mechanisms: Stacks are used to implement undo functionality in applications, where each action is pushed onto a stack and can be popped off to revert the action
+
+# Practice Problems:
+# 1. Balanced Parentheses: Write a function to check if a given expression has balanced parentheses
+def is_balanced(expression):
+    stack = Stack()
+    for char in expression:
+        if char in "({[":
+            stack.push(char)
+        elif char in ")}]":
+            if stack.is_empty():
+                return False
+            top = stack.pop()
+            if (char == ")" and top !="(") or (char  == "}" and top !="{") or (char == "]" and top !="["):
+                return False
+    return stack.is_empty()
+
+# Test cases
+print(is_balanced("()"))  # Output: True
+print(is_balanced("({[()]})"))  # Output: True
+print(is_balanced("({[)]}"))  # Output: False
+
+# 2. Reverse a String: Write a function to reverse a string using a stack
+def reverse_string(s):
+    stack = Stack()
+    for char in s:
+        stack.push(char)
+    reversed_s = ""
+    while not stack.is_empty():
+        reversed_s += stack.pop()
+    return reversed_s
+
+# Test case
+print(reverse_string("hello"))  # Output: "olleh"
+ 
