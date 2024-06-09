@@ -2,11 +2,16 @@
 
 - Arrays
 - Linked Lists
-- Stacks and Queues
-- Hash Tables
+- Stacks
+- Queues
+- Hash Tables (or Hash Maps)
 - Trees (Binary Trees, Binary Search Trees, AVL Trees, etc.)
-- Heaps
-- Graphs
+- Heaps (Binary Heaps)
+- Graphs (Directed or Undirected)
+- Tries (Prefix Trees)
+- Sets
+- Priority Queues
+- Disjoint Sets (Union-Find)
 
 2. Algorithms
 

@@ -50,7 +50,7 @@ stack.display() # Output: [10, 20]
 
 
 # Use Cases for Stacks:
-    # Function Call Management: Stacks are used to manage function calls and recursion. Each time a function is called, a new frame is pushed onto the stack, and when the funciton returns, the frame is popped off.
+    # Function Call Management: Stacks are used to manage function calls and recursion. Each time a function is called, a new frame is pushed onto the stack, and when the function returns, the frame is popped off.
     # Expression Evaluation: Stacks are used to evaluate arithmetic expressions, especially those written in postfix notation(Reverse Polish Notation).
     # Backtracking Algorithms: Stacks are used in algorithms that involve backtracking, such as solving mazes, puzzles, and pathfinding problems
     # Undo Mechanisms: Stacks are used to implement undo functionality in applications, where each action is pushed onto a stack and can be popped off to revert the action
