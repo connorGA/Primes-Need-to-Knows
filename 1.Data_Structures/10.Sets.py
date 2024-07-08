@@ -1,5 +1,5 @@
 # Sets:
-    # A set is a data structure that stores unique elements and supports various operations like addition, deletion, and membership testing
+    # A set is a data structure that stores unique elements(NO DUPLICATES) and supports various operations like addition, deletion, and membership testing
 
 # Operations: 
     # Add: adds an element to the set
