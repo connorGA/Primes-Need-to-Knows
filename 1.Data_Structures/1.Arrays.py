@@ -2,7 +2,7 @@
 
 # Properties:
     # Fixed Size: Once an array is created, its size cannot be changed
-    # Indexing: Elements in an array can be accessed using their index, with the first element having and index of 0
+    # Indexing: Elements in an array can be accessed using their index, with the first element having an index of 0
     # Contiguous Memory Allocation: Arrays are stored in contiguous memory locations
 
 # Operations:

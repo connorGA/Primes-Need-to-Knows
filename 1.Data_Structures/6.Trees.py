@@ -19,7 +19,7 @@
     # Trie: A tree used for storing a dynamic set or associative array where keys are usually strings
 
 # Applications:
-    # Binary Search Tress(BST): Efficiently supports search, insert, and delete operations
+    # Binary Search Trees(BST): Efficiently supports search, insert, and delete operations
     # Heaps: Implemented as binary trees and used in priority queues
     # Syntax Tress: Used in compilers to represent the structure of program code
     # Tries: Used for efficient information retrieval, such as autocomplete and spell-check features

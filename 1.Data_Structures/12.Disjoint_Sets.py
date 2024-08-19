@@ -7,8 +7,8 @@
     # Union: Merges two sets into one. This operation ensures that two elements are in the same set.
 
 # Optimizations:
-    # Path Compression: Flattens the structure of the tree whenever 'find' is called, making the trees shallower and speeding up futute operations
-    # Union by Rank/Size: Always attaches the smalles tree under the root of the larger tree to keep the tree balanced, reducing the height
+    # Path Compression: Flattens the structure of the tree whenever 'find' is called, making the trees shallower and speeding up future operations
+    # Union by Rank/Size: Always attaches the smallest tree under the root of the larger tree to keep the tree balanced, reducing the height
 
 # Applications:
     # Connected Components: Determining connected components in an undirected graph

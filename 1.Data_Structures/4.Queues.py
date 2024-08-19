@@ -5,11 +5,11 @@
     # Dequeue: Removes and returns the element from the front of the queue
     # Front: Returns the element at the front of the queue without removing it
     # IsEmpty: Checks if the queue is empty
-    # Size: Returns the number of elements currentrly in the queue
+    # Size: Returns the number of elements currently in the queue
 
 # Implementation:
-    # Array-based implementation: In this implementation, a fixed-size array us used to store the elements of the queue. It requires keepeing track of the front end rear pointers to perform enqueue and dequeue operations efficiently. However, reszing the array can be costly if it becomes full.
-    # Linked list-based implementation: In this implementation, a linked list is used to store the elements of the queue. It allows for dynamic resizing without the need to copy elements. However, it requires addtional memory for maintaining the links between elements.
+    # Array-based implementation: In this implementation, a fixed-size array us used to store the elements of the queue. It requires keeping track of the front and rear pointers to perform enqueue and dequeue operations efficiently. However, resizing the array can be costly if it becomes full.
+    # Linked list-based implementation: In this implementation, a linked list is used to store the elements of the queue. It allows for dynamic resizing without the need to copy elements. However, it requires additional memory for maintaining the links between elements.
 
 # Applications:
     # Breadth-First Search(BFS): Used to traverse graphs level by level, visiting all nodes at the current level before moving to the next level
@@ -97,7 +97,7 @@ def levelOrder(root: TreeNode):
         level_size = len(queue)
         current_level = []
 
-        for _ in range(level_size):
+        for _ in range(level_size): 
             node = queue.popleft()
             current_level.append(node.val)
 
@@ -117,3 +117,5 @@ root.right = TreeNode(20)
 root.right.left = TreeNode(15)
 root.right.right = TreeNode(7)
 print(levelOrder(root))  # Output: [[3], [9, 20], [15, 7]]
+
+

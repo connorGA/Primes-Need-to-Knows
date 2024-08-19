@@ -92,10 +92,10 @@ print(reverse_string("hello"))  # Output: "olleh"
 def next_greater_element(arr):
     stack = Stack()
     result = [-1] * len(arr)
-    for i in range(len(arr) -1, -1, -1):
-        while not stack.is_empty() and stack.peek() <= arr[i]:
+    for i in range(len(arr) -1, -1, -1):            # Loop through the array in reverse order
+        while not stack.is_empty() and stack.peek() <= arr[i]: 
             stack.pop()
-        if not stack.is_empty():
+        if not stack.is_empty(): 
             result[i] = stack.peek()
         stack.push(arr[i])
     return result

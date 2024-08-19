@@ -29,7 +29,7 @@
     # Search (BFS/DFS): O(V + E)
 
 # Representation:
-    # Adjacency Matrix: A 2D array where the cell at row 'i' and column 'j' represents the presence (and possible the weight) of an edge berween vertices 'i' and 'j'
+    # Adjacency Matrix: A 2D array where the cell at row 'i' and column 'j' represents the presence (and possible the weight) of an edge between vertices 'i' and 'j'
     # Adjacency List: An array of lists. An array index represents a vertex, and each list contains the adjacent vertices
 
 # Example of Graph Representation:

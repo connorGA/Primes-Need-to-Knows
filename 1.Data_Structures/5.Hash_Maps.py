@@ -86,7 +86,7 @@ def twoSum(nums, target):
 
 # GROUP ANAGRAMS:
     # Given an array of strings, group anagrams together
-from collections import defaultdict
+from collections import defaultdict # defaultdict provides defauly value for a nonexistent key
 
 def group_Anagrams(strs):
     hashmap = defaultdict(list)
