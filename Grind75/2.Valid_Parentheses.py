@@ -25,7 +25,7 @@ class Solution(object):
 
         for c in s:
             if c in closeToOpen:                                    # this works because it is only checking the key char in the dict, aka closing parentheses. If c is a closing parenthesis, we want to make sure our stack isnt empty(that would be invalid) and we want to check if the parenthesis at the top of the stack matches. If its not a closing parenth, we'll just skip that if statement and move to the next where we append it to the stack. 
-                if stack and stack[-1] == closeToOpen[c]:
+                if stack and stack[-1] == closeToOpen[c]: 
                     stack.pop()
                 else:
                     return False
