@@ -54,3 +54,4 @@ class Solution(object):
 # Big O Notation
     # Time: O(n) - we go through every token in the input list once
     # Space: O(n) - we use a stack to store the numbers, which can be up to n/2 in size in the worst case, where n is the number of tokens in the input list
+    
