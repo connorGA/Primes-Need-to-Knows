@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Study Tool</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>LeetCode Flashcards</h1>
+
+    <!-- Form to add a new flashcard -->
+    <form action="/add" method="POST">
+        <input type="text" name="problem_title" placeholder="Problem Title" required>
+        <input type="text" name="problem_url" placeholder="Problem URL" required>
+        <button type="submit">Add Flashcard</button>
+    </form>
+
+    <div class="flashcards">
+        {% for flashcard in flashcards %}
+            <div class="flashcard">
+                <h3>{{ flashcard.problem_title }}</h3>
+                <a href="{{ flashcard.problem_url }}" target="_blank">View Problem</a>
+                <p>Current Level: {{ flashcard.current_level }}</p>
+                
+                <!-- Move flashcard up or down levels -->
+                <a href="/move/{{ flashcard.id }}/up">Move Up</a>
+                <a href="/move/{{ flashcard.id }}/down">Move Down</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
