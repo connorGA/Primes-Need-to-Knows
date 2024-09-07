@@ -16,17 +16,26 @@
         <button type="submit">Add Flashcard</button>
     </form>
 
-    <div class="flashcards">
-        {% for flashcard in flashcards %}
-            <div class="flashcard">
-                <h3>{{ flashcard.problem_title }}</h3>
-                <a href="{{ flashcard.problem_url }}" target="_blank">View Problem</a>
-                <p>Current Level: {{ flashcard.current_level }}</p>
-                
-                <!-- Move flashcard up or down levels -->
-                <a href="/move/{{ flashcard.id }}/up">Move Up</a>
-                <a href="/move/{{ flashcard.id }}/down">Move Down</a>
+    <!-- Level Stacks -->
+    <div class="levels">
+        {% for level in range(5) %}
+        <div class="level" id="level-{{ level }}">
+            <h2>Level {{ level + 1 }}</h2>
+            <div class="card-stack">
+                {% for flashcard in flashcards %}
+                    {% if flashcard.current_level == level %}
+                        <div class="flashcard">
+                            <h3>{{ flashcard.problem_title }}</h3>
+                            <a href="{{ flashcard.problem_url }}" target="_blank">View Problem</a>
+                            <div class="actions">
+                                <a href="/move/{{ flashcard.id }}/up">Move Up</a>
+                                <a href="/move/{{ flashcard.id }}/down">Move Down</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
+        </div>
         {% endfor %}
     </div>
 </body>

@@ -34,29 +34,68 @@ button:hover {
     background-color: #218838;
 }
 
-.flashcards {
+.levels {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.level {
+    width: 15%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    min-height: 200px;  /* Ensure enough height for stacking */
+}
+
+.level h2 {
+    margin-bottom: 10px;
+}
+
+.card-stack {
+    display: flex;
+    flex-direction: column;  /* Stack cards in a column */
+    gap: 10px;  /* Add space between stacked cards */
+    position: relative;
 }
 
 .flashcard {
+    width: 100%;
+    padding: 10px;
     background-color: white;
-    padding: 15px;
-    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 250px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.flashcard h3 {
+    margin: 0;
 }
 
 .flashcard a {
-    display: inline-block;
+    display: block;
     margin-top: 10px;
     text-decoration: none;
     color: #007bff;
 }
 
 .flashcard a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.actions a {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.actions a:hover {
     text-decoration: underline;
 }
