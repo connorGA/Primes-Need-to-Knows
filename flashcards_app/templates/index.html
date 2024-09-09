@@ -36,13 +36,18 @@
                             <h3>{{ flashcard.problem_title }}</h3>
                             <a href="{{ flashcard.problem_url }}" target="_blank">View Problem</a>
                             <div class="actions">
-                                <a href="/move/{{ flashcard.id }}/up">Move Up</a>
                                 <a href="/move/{{ flashcard.id }}/down">Move Down</a>
+                                <a href="/move/{{ flashcard.id }}/up">Move Up</a>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="manage">
+                                <a href="/edit/{{ flashcard.id }}">Edit</a>
                             </div>
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
+            
         </div>
         {% endfor %}
     </div>

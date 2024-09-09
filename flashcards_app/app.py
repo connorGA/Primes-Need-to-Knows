@@ -67,13 +67,30 @@ def move_flashcard(flashcard_id, direction):
     db.session.commit()
     return redirect(url_for('index'))
 
+# Route to edit a flashcard
+@app.route('/edit/<int:flashcard_id>', methods=['GET', 'POST'])
+def edit_flashcard(flashcard_id):
+    flashcard = Flashcard.query.get_or_404(flashcard_id)
+    
+    if request.method == 'POST':
+        # Get the updated form data
+        flashcard.problem_title = request.form['problem_title']
+        flashcard.problem_url = request.form['problem_url']
+        flashcard.difficulty = request.form['difficulty']
+        
+        db.session.commit()
+        return redirect(url_for('index'))
+    
+    return render_template('edit.html', flashcard=flashcard)
+
 # Route to delete a flashcard
-@app.route('/delete/<int:flashcard_id>')
+@app.route('/delete/<int:flashcard_id>', methods=['POST'])
 def delete_flashcard(flashcard_id):
-    flashcard = Flashcard.query.get(flashcard_id)
+    flashcard = Flashcard.query.get_or_404(flashcard_id)
     db.session.delete(flashcard)
     db.session.commit()
     return redirect(url_for('index'))
+
 
 # Run the app
 if __name__ == "__main__":
