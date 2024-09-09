@@ -13,8 +13,16 @@
     <form action="/add" method="POST">
         <input type="text" name="problem_title" placeholder="Problem Title" required>
         <input type="text" name="problem_url" placeholder="Problem URL" required>
+        <label for="difficulty">Difficulty:</label>
+        <select name="difficulty" id="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
         <button type="submit">Add Flashcard</button>
     </form>
+    
+    
 
     <!-- Level Stacks -->
     <div class="levels">
@@ -24,7 +32,7 @@
             <div class="card-stack">
                 {% for flashcard in flashcards %}
                     {% if flashcard.current_level == level %}
-                        <div class="flashcard">
+                        <div class="flashcard {{ flashcard.difficulty }}">
                             <h3>{{ flashcard.problem_title }}</h3>
                             <a href="{{ flashcard.problem_url }}" target="_blank">View Problem</a>
                             <div class="actions">
