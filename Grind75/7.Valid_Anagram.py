@@ -29,3 +29,24 @@ class Solution(object):
 # Big O Notation:
     # Time: O(n) - where n is the length of the longest string
     # Space: O(n) - where n is the length of the longest string
+
+def isAnagram2(self, s, t):
+        if len(s) != len(t):
+            return False
+        
+        counter = {}
+
+        for c in s:
+            counter[c] = counter.get(c,0) + 1
+        
+        for char in t:
+            if char not in counter or counter[char] == 0:
+                return False
+            counter[char] -= 1
+        
+        return all(value == 0 for value in counter.values())
+
+# Big O Notation:
+    # Time: O(n) - where n is the length of the lenght of the strings
+    # Space: O(k) - where n is the number of unique characters in the string
+    
